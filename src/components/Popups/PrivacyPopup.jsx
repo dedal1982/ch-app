@@ -1,6 +1,6 @@
 import LeiDP from "../../assets/images/Hero/Hero_5.webp";
 
-function LeiPrivacyPopup() {
+function PrivacyPopup() {
   return (
     <>
       <div className="popup-image">
@@ -121,4 +121,4 @@ function LeiPrivacyPopup() {
   );
 }
 
-export default LeiPrivacyPopup;
+export default PrivacyPopup;

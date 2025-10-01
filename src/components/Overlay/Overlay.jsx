@@ -1,6 +1,6 @@
 import "./Overlay.css";
 
-function Overlay() {
+function Overlay({ children }) {
   return (
     <div id="overlay" className="overlay">
       <div className="overlay-content">
@@ -24,7 +24,7 @@ function Overlay() {
             </g>
           </svg>
         </button>
-        <div className="overlay-inner"></div>
+        <div className="overlay-inner">{children}</div>
       </div>
     </div>
   );

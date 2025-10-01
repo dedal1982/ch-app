@@ -1,6 +1,6 @@
 import LeiDP from "../../assets/images/Hero/Hero_5.webp";
 
-function LeiAgreementPopup() {
+function TermsPopup() {
   return (
     <>
       <div className="popup-image">
@@ -119,4 +119,4 @@ function LeiAgreementPopup() {
   );
 }
 
-export default LeiAgreementPopup;
+export default TermsPopup;

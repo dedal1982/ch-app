@@ -1,6 +1,6 @@
 import DekmenDP from "../../assets/images/Hero/Hero_1.webp";
 
-function DekmenSupportPopup() {
+function SkatePopup() {
   return (
     <>
       <div className="popup-image">
@@ -96,4 +96,4 @@ function DekmenSupportPopup() {
   );
 }
 
-export default DekmenSupportPopup;
+export default SkatePopup;

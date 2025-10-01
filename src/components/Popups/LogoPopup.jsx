@@ -1,6 +1,6 @@
 import AikisDP from "../../assets/images/Hero/Hero_8.webp";
 
-function AikisLogoPopup() {
+function LogoPopup() {
   return (
     <>
       <div className="overlay-inner__image">
@@ -67,4 +67,4 @@ function AikisLogoPopup() {
   );
 }
 
-export default AikisLogoPopup;
+export default LogoPopup;

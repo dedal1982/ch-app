@@ -1,6 +1,6 @@
 import ReinaDP from "../../assets/images/Hero/Hero_2.webp";
 
-function ReinaSupportPopup() {
+function RollerPopup() {
   return (
     <>
       <div className="popup-image">
@@ -93,4 +93,4 @@ function ReinaSupportPopup() {
   );
 }
 
-export default ReinaSupportPopup;
+export default RollerPopup;

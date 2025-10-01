@@ -1,6 +1,6 @@
 import MimiDP from "../../assets/images/Hero/Hero_4.webp";
 
-function MimiCopyrightPopup() {
+function CopyrightPopup() {
   return (
     <>
       <div className="popup-image__copyright">
@@ -81,4 +81,4 @@ function MimiCopyrightPopup() {
   );
 }
 
-export default MimiCopyrightPopup;
+export default CopyrightPopup;

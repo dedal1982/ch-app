@@ -1,6 +1,6 @@
 import KimiDP from "../../assets/images/Hero/Hero_7.webp";
 
-function KimiContactsPopup() {
+function ContactsPopup() {
   return (
     <>
       <div className="overlay-inner__image">
@@ -99,4 +99,4 @@ function KimiContactsPopup() {
   );
 }
 
-export default KimiContactsPopup;
+export default ContactsPopup;

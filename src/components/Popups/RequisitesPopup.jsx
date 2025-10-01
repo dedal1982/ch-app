@@ -1,6 +1,6 @@
 import RayDP from "../../assets/images/Hero/Hero_6.webp";
 
-function RayRequisitesPopup() {
+function RequisitesPopup() {
   return (
     <>
       <div className="popup-image">
@@ -101,4 +101,4 @@ function RayRequisitesPopup() {
   );
 }
 
-export default RayRequisitesPopup;
+export default RequisitesPopup;

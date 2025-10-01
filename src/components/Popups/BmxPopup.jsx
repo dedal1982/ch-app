@@ -1,6 +1,6 @@
 import RiverDP from "../../assets/images/Hero/Hero_3.webp";
 
-function RiverSupportPopup() {
+function BmxPopup() {
   return (
     <>
       <div className="popup-image">
@@ -96,4 +96,4 @@ function RiverSupportPopup() {
   );
 }
 
-export default RiverSupportPopup;
+export default BmxPopup;
