@@ -1,10 +1,10 @@
-function CenterPopup() {
+function OverlayContent() {
   return (
     <>
-      <div className="popup-image">
+      <div className="overlay-inner__image">
         <img src="./images/Hero/Hero_1.webp" alt="Placeholder Image" />
       </div>
-      <div className="popup-text__top">
+      <div className="overlay-inner-text-top">
         — Привет. Это Декмен. Я не люблю долгих разговоров, но сегодня скажу то,
         что важно. Мы — команда «HeroSkAge». Мы сражаемся против «Eidovyrex»,
         чтобы защитить то, что нам дорого. Но знаете, что самое главное в любой
@@ -13,9 +13,9 @@ function CenterPopup() {
         моим друзьям, но и компании ООО «Честный Эйб», которая создаёт нашу
         игру.
       </div>
-      <hr className="popup-separator" />
-      <p className="popup-title">Поддержка компании и разработчиков</p>
-      <div className="popup-text">
+      <hr className="overlay-inner-separator" />
+      <p className="overlay-inner-title">Поддержка компании и разработчиков</p>
+      <div className="overlay-inner-text">
         Мы — не просто группа людей. Мы — семья. И в этой семье каждый важен.
         Мои друзья — дочь Мими, Ривер, Рейна, Лей, Кими, Рэй, Эхо, котик Айкис и
         наши камрады — все они присоединились к этой битве. Но это ещё не все
@@ -23,7 +23,7 @@ function CenterPopup() {
         всё это стало реальностью, нам нужна ваша поддержка. Вот как вы можете
         помочь:
       </div>
-      <ol className="popup-list">
+      <ol className="overlay-inner-list">
         <li>
           <span>Расскажите о нас:</span>
           <p>
@@ -54,9 +54,9 @@ function CenterPopup() {
           </p>
         </li>
       </ol>
-      <hr className="popup-separator" />
-      <p className="popup-title">Дополнительная информация:</p>
-      <ul className="popup-list">
+      <hr className="overlay-inner-separator" />
+      <p className="overlay-inner-title">Дополнительная информация:</p>
+      <ul className="overlay-inner-list">
         <li>
           <span>Это не все герои:</span>
           <p>
@@ -80,12 +80,12 @@ function CenterPopup() {
           </p>
         </li>
       </ul>
-      <p className="popup-signature">
+      <p className="overlay-inner-signature">
         С уважением,
         <br />
         Декмен 🛹
       </p>
-      <div className="popup-text">
+      <div className="overlay-inner-text">
         P.S. Помните: даже самый крутой трюк начинается с первого шага. А ваша
         поддержка — это тот самый шаг, который помогает нам двигаться вперёд.
         Спасибо, что вы с нами! 💥
@@ -94,4 +94,4 @@ function CenterPopup() {
   );
 }
 
-export default CenterPopup;
+export default OverlayContent;
