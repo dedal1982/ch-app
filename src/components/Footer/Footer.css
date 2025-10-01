@@ -19,6 +19,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  z-index: 3;
 }
 @media screen and (max-width: 960px) {
   .footer__top {
@@ -40,18 +41,16 @@
   list-style-type: none;
   display: flex;
   flex-direction: column;
+  color: #d5d5d5;
   z-index: 3;
 }
 .footer__contacts-list li {
   font-family: "Montserrat_0", sans-serif;
   font-weight: normal;
-  color: #d5d5d5;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.requisites-hover.active.footer__contacts-list li {
-  color: #807f53;
-}
+
 .bank-list {
   text-align: end;
   cursor: pointer;
@@ -98,4 +97,14 @@
 }
 .footer__copyright-bottom:hover {
   color: #f7a3ab;
+}
+/* .requisites-hover.active.footer__contacts-list li {
+  color: #807f53;
+} */
+.requisites-hover {
+  transition: color 0.3s, color 0.3s;
+}
+
+.requisites-hover.active {
+  color: #807f53;
 }
