@@ -1,8 +1,10 @@
-function CenterPopup() {
+import DekmenDP from "../../assets/images/Hero/Hero_1.webp";
+
+function DekmenSupportPopup() {
   return (
     <>
       <div className="popup-image">
-        <img src="./images/Hero/Hero_1.webp" alt="Placeholder Image" />
+        <img src={DekmenDP} alt="Placeholder Image" />
       </div>
       <div className="popup-text__top">
         — Привет. Это Декмен. Я не люблю долгих разговоров, но сегодня скажу то,
@@ -94,4 +96,4 @@ function CenterPopup() {
   );
 }
 
-export default CenterPopup;
+export default DekmenSupportPopup;

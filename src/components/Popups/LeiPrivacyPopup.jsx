@@ -1,8 +1,10 @@
-function PrivacyPopup() {
+import LeiDP from "../../assets/images/Hero/Hero_5.webp";
+
+function LeiPrivacyPopup() {
   return (
     <>
       <div className="popup-image">
-        <img src="./images/Hero/Hero_5.webp" alt="Placeholder Image" />
+        <img src={LeiDP} alt="Placeholder Image" />
       </div>
       <div className="popup-text__top">
         — Привет! Это снова я, Лей. Здесь я расскажу вам о том, как мы заботимся
@@ -119,4 +121,4 @@ function PrivacyPopup() {
   );
 }
 
-export default PrivacyPopup;
+export default LeiPrivacyPopup;

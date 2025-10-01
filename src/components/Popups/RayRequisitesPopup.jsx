@@ -1,8 +1,10 @@
-function RequisitesPopup() {
+import RayDP from "../../assets/images/Hero/Hero_6.webp";
+
+function RayRequisitesPopup() {
   return (
     <>
       <div className="popup-image">
-        <img src="./images/Hero/Hero_6.webp" alt="Placeholder Image" />
+        <img src={RayDP} alt="Placeholder Image" />
       </div>
       <div className="popup-text__top">
         — Приветствую. Меня зовут Рэй Уайт, и я привык работать с точностью и
@@ -99,4 +101,4 @@ function RequisitesPopup() {
   );
 }
 
-export default RequisitesPopup;
+export default RayRequisitesPopup;

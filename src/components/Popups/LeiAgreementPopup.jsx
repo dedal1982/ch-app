@@ -1,8 +1,10 @@
-function TermsPopup() {
+import LeiDP from "../../assets/images/Hero/Hero_5.webp";
+
+function LeiAgreementPopup() {
   return (
     <>
       <div className="popup-image">
-        <img src="./images/Hero/Hero_5.webp" alt="Placeholder Image" />
+        <img src={LeiDP} alt="Placeholder Image" />
       </div>
       <div className="popup-text__top">
         — Привет! Меня зовут Лей, и я — юный страж команды «HeroSkAge». Сегодня
@@ -117,4 +119,4 @@ function TermsPopup() {
   );
 }
 
-export default TermsPopup;
+export default LeiAgreementPopup;

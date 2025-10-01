@@ -1,8 +1,10 @@
-function RightPopup() {
+import ReinaDP from "../../assets/images/Hero/Hero_2.webp";
+
+function ReinaSupportPopup() {
   return (
     <>
       <div className="popup-image">
-        <img src="./images/Hero/Hero_2.webp" alt="Placeholder Image" />
+        <img src={ReinaDP} alt="Placeholder Image" />
       </div>
       <div className="popup-text__top">
         — Привет! Я — Рейна, и вы, наверное, уже знаете, что я не боюсь ни
@@ -91,4 +93,4 @@ function RightPopup() {
   );
 }
 
-export default RightPopup;
+export default ReinaSupportPopup;

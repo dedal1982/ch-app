@@ -1,8 +1,10 @@
-function LeftPopup() {
+import RiverDP from "../../assets/images/Hero/Hero_3.webp";
+
+function RiverSupportPopup() {
   return (
     <>
       <div className="popup-image">
-        <img src="./images/Hero/Hero_3.webp" alt="Placeholder Image" />
+        <img src={RiverDP} alt="Placeholder Image" />
       </div>
       <div className="popup-text__top">
         — Привет, друзья! Это я, Ривер, или, как меня все называют, Дрифт. Я —
@@ -94,4 +96,4 @@ function LeftPopup() {
   );
 }
 
-export default LeftPopup;
+export default RiverSupportPopup;

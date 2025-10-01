@@ -1,8 +1,10 @@
-function CopyrightPopup() {
+import MimiDP from "../../assets/images/Hero/Hero_4.webp";
+
+function MimiCopyrightPopup() {
   return (
     <>
       <div className="popup-image__copyright">
-        <img src="./images/Hero/Hero_4.webp" alt="Placeholder Image" />
+        <img src={MimiDP} alt="Placeholder Image" />
       </div>
       <div className="popup-text__top">
         — Привет, друзья! Меня зовут Мими, и я — самая младшая в команде
@@ -79,4 +81,4 @@ function CopyrightPopup() {
   );
 }
 
-export default CopyrightPopup;
+export default MimiCopyrightPopup;
