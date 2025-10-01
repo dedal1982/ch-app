@@ -1,21 +1,19 @@
 function RequisitesPopup() {
   return (
     <>
-      <div className="overlay-inner__image">
+      <div className="popup-image">
         <img src="./images/Hero/Hero_6.webp" alt="Placeholder Image" />
       </div>
-      <div className="overlay-inner-text-top">
+      <div className="popup-text__top">
         — Приветствую. Меня зовут Рэй Уайт, и я привык работать с точностью и
         аккуратностью. Если вы хотите поддержать нашу борьбу против «Eidovyrex»
         или помочь компании ООО «Честный Эйб» в создании игры, которая станет
         частью вашей жизни, то ниже вы найдёте все необходимые реквизиты. Каждая
         деталь здесь важна, как и каждый ваш вклад.
       </div>
-      <hr className="overlay-inner-separator" />
-      <p className="overlay-inner-title">
-        Реквизиты компании ООО «Честный Эйб»
-      </p>
-      <ul className="overlay-inner-list">
+      <hr className="popup-separator" />
+      <p className="popup-title">Реквизиты компании ООО «Честный Эйб»</p>
+      <ul className="popup-list">
         <li>
           <span>Полное наименование:</span>
           <p>Общество с ограниченной ответственностью «Честный Эйб»</p>
@@ -49,19 +47,19 @@ function RequisitesPopup() {
           <span>Корреспондентский счёт:</span> 30101810200000000593
         </li>
       </ul>
-      <hr className="overlay-inner-separator" />
-      <p className="overlay-inner-title">Для чего это нужно?</p>
-      <p className="overlay-inner-subtitle">
+      <hr className="popup-separator" />
+      <p className="popup-title">Для чего это нужно?</p>
+      <p className="popup-subtitle">
         Эти реквизиты могут понадобиться, если вы хотите:
       </p>
-      <ul className="overlay-inner-list">
+      <ul className="popup-list">
         <li>Поддержать проект финансово.</li>
         <li>Заключить договор на сотрудничество.</li>
         <li>Уточнить детали для юридического взаимодействия.</li>
       </ul>
-      <hr className="overlay-inner-separator" />
-      <p className="overlay-inner-title">Дополнительная информация:</p>
-      <ul className="overlay-inner-list">
+      <hr className="popup-separator" />
+      <p className="popup-title">Дополнительная информация:</p>
+      <ul className="popup-list">
         <li>
           <span>Прозрачность и честность:</span>
           <p>
@@ -88,11 +86,11 @@ function RequisitesPopup() {
           </p>
         </li>
       </ul>
-      <div className="overlay-inner-text">
+      <div className="popup-text">
         Спасибо за вашу поддержку. Вместе мы сможем сделать этот проект
         по-настоящему великим.
       </div>
-      <p className="overlay-inner-signature">
+      <p className="popup-signature">
         С уважением,
         <br />
         Рэй Уайт 🕶️

@@ -1,24 +1,24 @@
 function CopyrightPopup() {
   return (
     <>
-      <div className="overlay-inner__image overlay-inner__image-copyright">
+      <div className="popup-image__copyright">
         <img src="./images/Hero/Hero_4.webp" alt="Placeholder Image" />
       </div>
-      <div className="overlay-inner-text-top">
+      <div className="popup-text__top">
         — Привет, друзья! Меня зовут Мими, и я — самая младшая в команде
         «HeroSkAge». Но даже я знаю, как важно защищать то, что создаётся с
         любовью и трудом. В этом разделе я расскажу вам о том, как мы бережём
         нашу игру и всё, что с ней связано.
       </div>
-      <hr className="overlay-inner-separator" />
-      <p className="overlay-inner-title">Копирайт (©) ООО «Честный Эйб»</p>
-      <div className="overlay-inner-text">
+      <hr className="popup-separator" />
+      <p className="popup-title">Копирайт (©) ООО «Честный Эйб»</p>
+      <div className="popup-text">
         Вся игра, её персонажи, истории, музыка, графика и даже такие мелочи,
         как мои любимые камушки в рюкзаке, — это интеллектуальная собственность
         компании <span>ООО «Честный Эйб» </span>. Это значит, что всё, что вы
         видите и слышите в игре, защищено авторским правом.
       </div>
-      <ul className="overlay-inner-list">
+      <ul className="popup-list">
         <li>
           <span>Что это значит?</span>
           <p>
@@ -38,9 +38,9 @@ function CopyrightPopup() {
           </p>
         </li>
       </ul>
-      <hr className="overlay-inner-separator" />
-      <p className="overlay-inner-title">Дополнительная информация:</p>
-      <ul className="overlay-inner-list">
+      <hr className="popup-separator" />
+      <p className="popup-title">Дополнительная информация:</p>
+      <ul className="popup-list">
         <li>
           <span>Цитирование и использование:</span>
           <p>
@@ -66,12 +66,12 @@ function CopyrightPopup() {
           </p>
         </li>
       </ul>
-      <p className="overlay-inner-signature">
+      <p className="popup-signature">
         С любовью,
         <br />
         Мими 🌈
       </p>
-      <div className="overlay-inner-text">
+      <div className="popup-text">
         P.S. Помните, что даже маленькие герои могут делать большие дела! И
         защищать свои мечты — это тоже большое дело! 🧸
       </div>

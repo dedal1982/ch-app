@@ -1,25 +1,25 @@
 function TermsPopup() {
   return (
     <>
-      <div className="overlay-inner__image">
+      <div className="popup-image">
         <img src="./images/Hero/Hero_5.webp" alt="Placeholder Image" />
       </div>
-      <div className="overlay-inner-text-top">
+      <div className="popup-text__top">
         — Привет! Меня зовут Лей, и я — юный страж команды «HeroSkAge». Сегодня
         я расскажу вам о важном документе —
         <span>Пользовательском соглашении. </span> Это как свод правил, который
         помогает нам всем понимать, как правильно взаимодействовать с сайтом
         компании <span>ООО «Честный Эйб» </span> и будущей игрой.
       </div>
-      <hr className="overlay-inner-separator" />
-      <p className="overlay-inner-title">Пользовательское соглашение</p>
-      <div className="overlay-inner-text">
+      <hr className="popup-separator" />
+      <p className="popup-title">Пользовательское соглашение</p>
+      <div className="popup-text">
         Наш сайт — https://chestnyyeyb.ru/ — это место, где вы можете узнать
         больше о нас, нашей игре и стать частью нашего сообщества. Но чтобы всё
         было честно и понятно, мы создали
         <span>Пользовательское соглашение. </span> Вот что важно знать:
       </div>
-      <ol className="overlay-inner-list">
+      <ol className="popup-list">
         <li>
           <span>Правила использования сайта:</span>
           <p>
@@ -77,9 +77,9 @@ function TermsPopup() {
           </p>
         </li>
       </ol>
-      <hr className="overlay-inner-separator" />
-      <p className="overlay-inner-title">Дополнительная информация:</p>
-      <ul className="overlay-inner-list">
+      <hr className="popup-separator" />
+      <p className="popup-title">Дополнительная информация:</p>
+      <ul className="popup-list">
         <li>
           <span>Почему это важно?</span>
           <p>
@@ -103,12 +103,12 @@ function TermsPopup() {
           </p>
         </li>
       </ul>
-      <p className="overlay-inner-signature">
+      <p className="popup-signature">
         С уважением,
         <br />
         Лей ⚡
       </p>
-      <div className="overlay-inner-text">
+      <div className="popup-text">
         P.S. Помните, что даже гром начинается с маленькой искры. А ваша
         поддержка — это та самая искра, которая помогает нам двигаться вперёд!
         🌩️
