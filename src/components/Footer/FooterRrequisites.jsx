@@ -5,7 +5,7 @@ function FooterRrequisites() {
   const [active, setActive] = useState(false);
 
   return (
-    <div id="requisites" className="footer__top">
+    <div id="requisites" className="footer__top" tabIndex={0}>
       {/* Контакты с требованиями */}
       <div className="footer__contacts">
         <ul

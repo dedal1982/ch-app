@@ -2,6 +2,7 @@ function MainRoller() {
   return (
     <div id="main-right" className="main__image-r">
       <svg
+        tabIndex={0}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="17.5609756097561 4.732 326.22889305816136 323.804"
         style={{ maxHeight: "500px" }}

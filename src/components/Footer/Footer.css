@@ -78,14 +78,15 @@
     gap: 5px;
   }
 }
-.footer__copyright-item li {
+.footer__copyright-item li a {
   font-family: "Montserrat_0", sans-serif;
   font-weight: normal;
   color: #d5d5d5;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.footer__copyright-item li:hover {
+.footer__copyright-item li a:hover,
+.footer__copyright-item li a:focus {
   color: #566ebf;
 }
 .footer__copyright-bottom {
@@ -95,12 +96,10 @@
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.footer__copyright-bottom:hover {
+.footer__copyright-bottom:hover,
+.footer__copyright-bottom:focus {
   color: #f7a3ab;
 }
-/* .requisites-hover.active.footer__contacts-list li {
-  color: #807f53;
-} */
 .requisites-hover {
   transition: color 0.3s, color 0.3s;
 }

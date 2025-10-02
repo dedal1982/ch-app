@@ -11,8 +11,12 @@ function HeaderContacts() {
     setContactsText("Контакты");
   };
 
+  const handleContactsText = (name) => {
+    setContactsText(name);
+  };
+
   return (
-    <div className="header__contacts">
+    <div className="header__contacts" tabIndex={0}>
       <div id="header-contacts" className="header__contacts-name">
         {contactsText}
       </div>
@@ -24,6 +28,8 @@ function HeaderContacts() {
             data-name="Сайты"
             onMouseOver={() => handleMouseOver("Сайты")}
             onMouseOut={handleMouseOut}
+            onFocus={() => handleContactsText("Сайты")}
+            onBlur={handleMouseOut}
           >
             +7 (916) 571-89-89
           </a>
@@ -35,6 +41,8 @@ function HeaderContacts() {
             data-name="Игры"
             onMouseOver={() => handleMouseOver("Игры")}
             onMouseOut={handleMouseOut}
+            onFocus={() => handleContactsText("Игры")}
+            onBlur={handleMouseOut}
           >
             +7 (925) 571-89-89
           </a>
@@ -46,6 +54,8 @@ function HeaderContacts() {
             data-name="Тестирование"
             onMouseOver={() => handleMouseOver("Тестирование")}
             onMouseOut={handleMouseOut}
+            onFocus={() => handleContactsText("Тестирование")}
+            onBlur={handleMouseOut}
           >
             +7 (964) 571-89-89
           </a>
@@ -57,6 +67,8 @@ function HeaderContacts() {
             data-name="Симбиоз"
             onMouseOver={() => handleMouseOver("Симбиоз")}
             onMouseOut={handleMouseOut}
+            onFocus={() => handleContactsText("Симбиоз")}
+            onBlur={handleMouseOut}
           >
             +7 (985) 571-89-89
           </a>

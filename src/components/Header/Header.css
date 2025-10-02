@@ -37,7 +37,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
-.header__logo:hover {
+.header__logo:hover,
+.header__logo:focus {
   fill: #766d7b;
 }
 @media screen and (max-width: 767px) {
@@ -56,23 +57,31 @@
 .header__contacts-mobile {
   display: none;
 }
-.header__contacts:hover .header__contacts-name {
+.header__contacts:hover .header__contacts-name,
+.header__contacts:focus .header__contacts-name {
   color: #5eafa4;
   border-bottom: 1px solid #5eafa4;
 }
-.header__contacts:hover .header__contacts-phones li a {
+.header__contacts:hover .header__contacts-phones li a,
+.header__contacts:focus .header__contacts-phones li a {
   color: #5eafa4;
 }
-.header__contacts:hover .header__contacts-phones li span {
+.header__contacts:hover .header__contacts-phones li span,
+.header__contacts:focus .header__contacts-phones li span {
   background: #5eafa4;
 }
 .header__contacts:hover
   .header__contacts-phones
   li:not(:last-child)
+  span::before,
+.header__contacts:focus
+  .header__contacts-phones
+  li:not(:last-child)
   span::before {
   background: #5eafa4;
 }
-.header__contacts:hover .header__contacts-name::before {
+.header__contacts:hover .header__contacts-name::before,
+.header__contacts:focus .header__contacts-name::before {
   background: #5eafa4;
 }
 .header__contacts-name {
