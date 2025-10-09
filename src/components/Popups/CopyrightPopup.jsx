@@ -1,9 +1,10 @@
+import "./Popup.css";
 import MimiDP from "../../assets/images/Hero/Hero_4.webp";
 
 function CopyrightPopup() {
   return (
     <>
-      <div className="popup-image__copyright">
+      <div className="popup-image popup-image__copyright">
         <img src={MimiDP} alt="Placeholder Image" />
       </div>
       <div className="popup-text__top">

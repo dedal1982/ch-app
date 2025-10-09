@@ -1,3 +1,4 @@
+import "./Popup.css";
 import LeiDP from "../../assets/images/Hero/Hero_5.webp";
 
 function PrivacyPopup() {

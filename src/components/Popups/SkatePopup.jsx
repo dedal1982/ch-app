@@ -1,3 +1,4 @@
+import "./Popup.css";
 import DekmenDP from "../../assets/images/Hero/Hero_1.webp";
 
 function SkatePopup() {

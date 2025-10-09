@@ -1,27 +1,28 @@
+import "./Popup.css";
 import KimiDP from "../../assets/images/Hero/Hero_7.webp";
 
 function ContactsPopup() {
   return (
     <>
-      <div className="overlay-inner__image">
+      <div className="popup-image">
         <img src={KimiDP} alt="Placeholder Image" />
       </div>
-      <div className="overlay-inner-text-top">
+      <div className="popup-text__top">
         — Здравствуйте, дорогие друзья! Меня зовут Кими Иоки, и я — примкнула к
         команде «HeroSkAge». Если у вас есть вопросы, предложения или просто
         желание поддержать нашу борьбу против «Eidovyrex», вы всегда можете
         связаться с разработчиком. Мы ценим каждого, кто готов внести свой вклад
         в наше общее дело.
       </div>
-      <hr className="overlay-inner-separator" />
-      <div className="overlay-inner-text">
+      <hr className="popup-separator" />
+      <div className="popup-image-text">
         Компания ООО <span>«Честный Эйб»</span>, которая создаёт нашу игру,
         всегда открыта для общения. Он не только разрабатывает игры, но и готов
         предложить свои услуги по созданию сайтов и приложений, а также
         качественному тестированию ваших проектов. Вы можете связаться с
         создателем игры через следующие контакты:
       </div>
-      <ul className="overlay-inner-list">
+      <ul className="popup-list">
         <li>
           <span>Телефоны:</span>
           <br />
@@ -54,14 +55,14 @@ function ContactsPopup() {
         </li>
       </ul>
       <br />
-      <div className="overlay-inner-text">
+      <div className="popup-text">
         Мы всегда рады вашим сообщениям! Ваши идеи, отзывы и поддержка помогают
         нам становиться лучше. Ведь именно благодаря вам наша игра обретает
         жизнь и смысл.
       </div>
-      <hr className="overlay-inner-separator" />
-      <p className="overlay-inner-title">Дополнительная информация:</p>
-      <ul className="overlay-inner-list">
+      <hr className="popup-separator" />
+      <p className="popup-title">Дополнительная информация:</p>
+      <ul className="popup-list">
         <li>
           <span>Почему важно писать?</span>
           <p>
@@ -87,10 +88,10 @@ function ContactsPopup() {
           </p>
         </li>
       </ul>
-      <div className="overlay-inner-subtitle">
+      <div className="popup-subtitle">
         Спасибо, что вы с нами! Вместе мы сможем сделать мир игр лучше. ✨
       </div>
-      <p className="overlay-inner-signature">
+      <p className="popup-signature">
         С уважением,
         <br />
         Кими Иоки 🐉

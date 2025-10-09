@@ -1,3 +1,4 @@
+import "./Popup.css";
 import ReinaDP from "../../assets/images/Hero/Hero_2.webp";
 
 function RollerPopup() {

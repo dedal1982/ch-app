@@ -1,3 +1,4 @@
+import "./Popup.css";
 import RayDP from "../../assets/images/Hero/Hero_6.webp";
 
 function RequisitesPopup() {

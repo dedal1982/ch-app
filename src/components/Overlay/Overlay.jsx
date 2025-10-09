@@ -1,10 +1,46 @@
 import "./Overlay.css";
+import { useEffect, useRef } from "react";
 
-function Overlay({ children }) {
+function Overlay({ children, onClose }) {
+  const overlayRef = useRef(null);
+
+  // Обработка клика вне содержимого
+  const handleOverlayClick = (e) => {
+    e.stopPropagation();
+    if (overlayRef.current && e.target === overlayRef.current) {
+      onClose();
+    }
+  };
+
+  // Обработка нажатия ESC
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
   return (
-    <div id="overlay" className="overlay">
+    <div
+      id="overlay"
+      className="overlay"
+      ref={overlayRef}
+      onClick={handleOverlayClick}
+    >
       <div className="overlay-content">
-        <button className="overlay-close" type="button">
+        <button
+          className="overlay-close"
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            onClose();
+          }}
+        >
           <svg
             version="1.1"
             id="Capa_1"
