@@ -17,7 +17,12 @@ function MainRoller() {
   };
   return (
     <>
-      <button id="main-right" className="main__image-r" onClick={handleOpen}>
+      <button
+        id="main-right"
+        className="main__image-r"
+        onClick={handleOpen}
+        aria-label="Рейна"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="17.5609756097561 4.732 326.22889305816136 323.804"

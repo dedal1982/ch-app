@@ -33,7 +33,12 @@ function HeaderContacts() {
 
   return (
     <>
-      <div className="header__contacts" tabIndex={0} onClick={handleOpen}>
+      <div
+        className="header__contacts"
+        tabIndex={0}
+        onClick={handleOpen}
+        aria-label="Кими"
+      >
         <div id="header-contacts" className="header__contacts-name">
           {contactsText}
         </div>

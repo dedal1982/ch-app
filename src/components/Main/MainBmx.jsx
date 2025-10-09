@@ -18,7 +18,12 @@ function MainBmx() {
 
   return (
     <>
-      <button id="main-left" className="main__image-l " onClick={handleOpen}>
+      <button
+        id="main-left"
+        className="main__image-l "
+        onClick={handleOpen}
+        aria-label="Ривер"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 194">
           <path
             xmlns="http://www.w3.org/2000/svg"

@@ -17,7 +17,12 @@ function MainSkate() {
   };
   return (
     <>
-      <button id="main-center" className="main__image-c" onClick={handleOpen}>
+      <button
+        id="main-center"
+        className="main__image-c"
+        onClick={handleOpen}
+        aria-label="Декмен"
+      >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1300">
           <path
             xmlns="http://www.w3.org/2000/svg"
