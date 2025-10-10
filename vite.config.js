@@ -5,13 +5,11 @@ export default defineConfig({
   plugins: [react()],
   build: {
     emptyOutDir: true,
+    minify: "terser",
     rollupOptions: {
       output: {
-        // Имя файла для входных точек
         entryFileNames: "[name].js",
-        // Имя файла для чанков
         chunkFileNames: "[name].js",
-        // Имя файла для ассетов (CSS, изображения и т.д.)
         assetFileNames: "[name][extname]",
       },
     },

@@ -1,8 +1,9 @@
 import { createPortal } from "react-dom";
-import SkatePopup from "../Popups/SkatePopup";
-import useModal from "../../hooks/useModal";
 import { lazy, Suspense } from "react";
+import { LazySkatePopup } from "../Popups/LazyPopups";
+import useModal from "../../hooks/useModal";
 import Preloader from "../Preloader/Preloader";
+
 const LazyOverlay = lazy(() => import("../Overlay/Overlay"));
 
 function MainSkate() {
@@ -35,7 +36,7 @@ function MainSkate() {
         <Suspense fallback={<Preloader />}>
           {createPortal(
             <LazyOverlay onClose={handleClose}>
-              <SkatePopup />
+              <LazySkatePopup />
             </LazyOverlay>,
             document.body
           )}

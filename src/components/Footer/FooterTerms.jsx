@@ -1,8 +1,9 @@
-import { createPortal } from "react-dom";
 import { useNavigate, useLocation } from "react-router-dom";
-import TermsPopup from "../Popups/TermsPopup";
+import { createPortal } from "react-dom";
 import { lazy, Suspense } from "react";
+import { LazyTermsPopup } from "../Popups/LazyPopups";
 import Preloader from "../Preloader/Preloader";
+
 const LazyOverlay = lazy(() => import("../Overlay/Overlay"));
 
 function FooterTerms() {
@@ -35,7 +36,7 @@ function FooterTerms() {
         <Suspense fallback={<Preloader />}>
           {createPortal(
             <LazyOverlay onClose={handleClose}>
-              <TermsPopup />
+              <LazyTermsPopup />
             </LazyOverlay>,
             document.body
           )}

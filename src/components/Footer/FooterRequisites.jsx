@@ -1,13 +1,14 @@
 import "./Footer.css";
 import { useState } from "react";
 import { createPortal } from "react-dom";
-import RequisitesPopup from "../Popups/RequisitesPopup";
-import useModal from "../../hooks/useModal";
 import { lazy, Suspense } from "react";
+import { LazyRequisitesPopup } from "../Popups/LazyPopups";
+import useModal from "../../hooks/useModal";
 import Preloader from "../Preloader/Preloader";
+
 const LazyOverlay = lazy(() => import("../Overlay/Overlay"));
 
-function FooterRrequisites() {
+function FooterRequisites() {
   const [active, setActive] = useState(false);
 
   const { isOpen, open, close } = useModal(false);
@@ -76,7 +77,7 @@ function FooterRrequisites() {
         <Suspense fallback={<Preloader />}>
           {createPortal(
             <LazyOverlay onClose={handleClose}>
-              <RequisitesPopup />
+              <LazyRequisitesPopup />
             </LazyOverlay>,
             document.body
           )}
@@ -86,4 +87,4 @@ function FooterRrequisites() {
   );
 }
 
-export default FooterRrequisites;
+export default FooterRequisites;

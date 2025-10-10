@@ -1,8 +1,9 @@
 import { createPortal } from "react-dom";
-import RollerPopup from "../Popups/RollerPopup";
-import useModal from "../../hooks/useModal";
 import { lazy, Suspense } from "react";
+import { LazyRollerPopup } from "../Popups/LazyPopups";
+import useModal from "../../hooks/useModal";
 import Preloader from "../Preloader/Preloader";
+
 const LazyOverlay = lazy(() => import("../Overlay/Overlay"));
 
 function MainRoller() {
@@ -40,7 +41,7 @@ function MainRoller() {
         <Suspense fallback={<Preloader />}>
           {createPortal(
             <LazyOverlay onClose={handleClose}>
-              <RollerPopup />
+              <LazyRollerPopup />
             </LazyOverlay>,
             document.body
           )}

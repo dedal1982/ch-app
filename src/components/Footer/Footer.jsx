@@ -1,12 +1,12 @@
 import "./Footer.css";
-import FooterRrequisites from "./FooterRrequisites";
+import FooterRequisites from "./FooterRequisites";
 import FooterLower from "./FooterLower";
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer__wrapper holder">
-        <FooterRrequisites />
+        <FooterRequisites />
         <FooterLower />
       </div>
     </footer>

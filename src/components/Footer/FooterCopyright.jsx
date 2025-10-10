@@ -1,8 +1,9 @@
 import { createPortal } from "react-dom";
-import CopyrightPopup from "../Popups/CopyrightPopup";
-import useModal from "../../hooks/useModal";
 import { lazy, Suspense } from "react";
+import { LazyCopyrightPopup } from "../Popups/LazyPopups";
+import useModal from "../../hooks/useModal";
 import Preloader from "../Preloader/Preloader";
+
 const LazyOverlay = lazy(() => import("../Overlay/Overlay"));
 
 function FooterCopyright() {
@@ -28,7 +29,7 @@ function FooterCopyright() {
         <Suspense fallback={<Preloader />}>
           {createPortal(
             <LazyOverlay onClose={handleClose}>
-              <CopyrightPopup />
+              <LazyCopyrightPopup />
             </LazyOverlay>,
             document.body
           )}

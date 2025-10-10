@@ -1,8 +1,9 @@
 import { createPortal } from "react-dom";
-import LogoPopup from "../Popups/LogoPopup";
-import useModal from "../../hooks/useModal";
 import { lazy, Suspense } from "react";
+import { LazyLogoPopup } from "../Popups/LazyPopups";
+import useModal from "../../hooks/useModal";
 import Preloader from "../Preloader/Preloader";
+
 const LazyOverlay = lazy(() => import("../Overlay/Overlay"));
 
 function HeaderLogo() {
@@ -35,7 +36,7 @@ function HeaderLogo() {
         <Suspense fallback={<Preloader />}>
           {createPortal(
             <LazyOverlay onClose={handleClose}>
-              <LogoPopup />
+              <LazyLogoPopup />
             </LazyOverlay>,
             document.body
           )}

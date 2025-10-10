@@ -1,8 +1,9 @@
 import { createPortal } from "react-dom";
-import BmxPopup from "../Popups/BmxPopup";
-import useModal from "../../hooks/useModal";
 import { lazy, Suspense } from "react";
+import { LazyBmxPopup } from "../Popups/LazyPopups";
+import useModal from "../../hooks/useModal";
 import Preloader from "../Preloader/Preloader";
+
 const LazyOverlay = lazy(() => import("../Overlay/Overlay"));
 
 function MainBmx() {
@@ -36,7 +37,7 @@ function MainBmx() {
         <Suspense fallback={<Preloader />}>
           {createPortal(
             <LazyOverlay onClose={handleClose}>
-              <BmxPopup />
+              <LazyBmxPopup />
             </LazyOverlay>,
             document.body
           )}

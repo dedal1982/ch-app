@@ -10,7 +10,7 @@ const transport = new winston.transports.DailyRotateFile({
 });
 
 const logger = winston.createLogger({
-  level: "info",
+  level: "error", // <-- изменено с "info" на "error"
   format: winston.format.combine(
     winston.format.timestamp(),
     winston.format.printf(

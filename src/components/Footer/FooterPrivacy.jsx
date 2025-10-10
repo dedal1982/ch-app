@@ -1,8 +1,9 @@
-import { createPortal } from "react-dom";
 import { useNavigate, useLocation } from "react-router-dom";
-import PrivacyPopup from "../Popups/PrivacyPopup";
+import { createPortal } from "react-dom";
 import { lazy, Suspense } from "react";
+import { LazyPrivacyPopup } from "../Popups/LazyPopups";
 import Preloader from "../Preloader/Preloader";
+
 const LazyOverlay = lazy(() => import("../Overlay/Overlay"));
 
 function FooterPrivacy() {
@@ -35,7 +36,7 @@ function FooterPrivacy() {
         <Suspense fallback={<Preloader />}>
           {createPortal(
             <LazyOverlay onClose={handleClose}>
-              <PrivacyPopup />
+              <LazyPrivacyPopup />
             </LazyOverlay>,
             document.body
           )}

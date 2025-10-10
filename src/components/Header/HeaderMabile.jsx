@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { createPortal } from "react-dom";
-import ContactsPopup from "../Popups/ContactsPopup";
-import useModal from "../../hooks/useModal";
 import { lazy, Suspense } from "react";
+import { LazyContactsPopup } from "../Popups/LazyPopups";
+import useModal from "../../hooks/useModal";
 import Preloader from "../Preloader/Preloader";
+
 const LazyOverlay = lazy(() => import("../Overlay/Overlay"));
 
 function HeaderMabile() {
@@ -100,7 +101,7 @@ function HeaderMabile() {
         <Suspense fallback={<Preloader />}>
           {createPortal(
             <LazyOverlay onClose={handleClose}>
-              <ContactsPopup />
+              <LazyContactsPopup />
             </LazyOverlay>,
             document.body
           )}
