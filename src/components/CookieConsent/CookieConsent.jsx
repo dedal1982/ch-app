@@ -32,6 +32,15 @@ const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [gaLoaded, setGaLoaded] = useState(false);
 
+  // Предзагрузка изображения CookieIcon
+  useEffect(() => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.href = CookieIcon;
+    link.as = "image";
+    document.head.appendChild(link);
+  }, []);
+
   // Используем useCallback для loadGoogleAnalytics
   const loadGoogleAnalytics = useCallback(() => {
     if (!gaLoaded) {
