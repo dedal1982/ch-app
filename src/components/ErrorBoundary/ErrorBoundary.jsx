@@ -1,10 +1,14 @@
 import { ErrorBoundary } from "react-error-boundary";
 import StubPage from "../StubPage/StubPage";
+import logger from "../../utils/logger";
 
 const ErrorBoundaryWrapper = ({ children }) => {
   const handleError = (error, info) => {
-    // Можно логировать ошибку куда-то
-    console.error("Ошибка в ErrorBoundary:", error, info);
+    logger.error(
+      `Ошибка в ErrorBoundary: ${error.toString()}\nInfo: ${
+        info.componentStack
+      }`
+    );
   };
 
   return (
@@ -13,4 +17,5 @@ const ErrorBoundaryWrapper = ({ children }) => {
     </ErrorBoundary>
   );
 };
+
 export default ErrorBoundaryWrapper;
