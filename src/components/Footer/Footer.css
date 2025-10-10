@@ -45,7 +45,7 @@
   z-index: 3;
 }
 .footer__contacts-list li {
-  font-family: "Montserrat_0", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: normal;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -77,7 +77,7 @@
   }
 }
 .footer__link {
-  font-family: "Montserrat_0", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: normal;
   color: #d5d5d5;
   cursor: pointer;
@@ -95,7 +95,7 @@
   }
 }
 .footer__copyright-bottom {
-  font-family: "Montserrat_0", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: normal;
   color: #d5d5d5;
   transition: all 0.3s ease;
