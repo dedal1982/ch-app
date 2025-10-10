@@ -1,4 +1,4 @@
-# ![Markdown logo](image-1.png) ООО «Честный Эйб»
+# ![Markdown logo](favicon.png) ООО «Честный Эйб»
 
 ![Visitors](https://visitor-badge.laobi.icu/badge?page_id=dedal1982.27092025&left_color=%23000000&right_color=%23FF6600)
 
