@@ -1,15 +1,19 @@
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const manifestPath = path.resolve(__dirname, "dist/manifest.json");
 const htmlPath = path.resolve(__dirname, "dist/index.html");
+
 const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf-8"));
 let htmlContent = fs.readFileSync(htmlPath, "utf-8");
+
 // Ищем CSS файл по имени, например, "style.css"
 const cssEntryName = Object.keys(manifest).find((key) =>
   key.toLowerCase().includes("style.css")
 );
+
 if (cssEntryName && manifest[cssEntryName]) {
   const cssFilePath = manifest[cssEntryName].file; // путь к файлу с хешем
   // Удаляем существующую строку с rel="stylesheet" и crossorigin
