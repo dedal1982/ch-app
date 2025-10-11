@@ -1,24 +1,44 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
-import viteCompression from "vite-plugin-compression";
+import path from "path";
+import { fileURLToPath } from "url";
+import { componentTagger } from "lovable-tagger";
 
-export default defineConfig({
-  plugins: [
-    react(),
-    viteCompression({
-      filter: /\.(js|css|html|svg)$/i,
-      threshold: 10240,
-    }),
-  ],
-  build: {
-    emptyOutDir: true,
-    minify: "terser",
-    rollupOptions: {
-      output: {
-        entryFileNames: "[name].js",
-        chunkFileNames: "[name].js",
-        assetFileNames: "[name][extname]",
-      },
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// https://vitejs.dev/config/
+export default defineConfig(({ mode }) => ({
+  server: {
+    host: "::",
+    port: 8080,
+  },
+  plugins: [react(), mode === "development" && componentTagger()].filter(
+    Boolean
+  ),
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
     },
   },
-});
+  build: {
+    minify: "esbuild", // Быстрее чем terser
+    target: "esnext",
+    cssCodeSplit: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ["react", "react-dom", "react-router-dom"],
+          ui: [
+            "@radix-ui/react-dialog",
+            "@radix-ui/react-dropdown-menu",
+            "@radix-ui/react-toast",
+          ],
+        },
+        entryFileNames: "assets/[name]-[hash].js",
+        chunkFileNames: "assets/[name]-[hash].js",
+        assetFileNames: "assets/[name]-[hash][extname]",
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
+}));
