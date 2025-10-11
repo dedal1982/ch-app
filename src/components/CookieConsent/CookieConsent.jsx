@@ -1,5 +1,8 @@
 import "./CookieConsent.css";
 import { useState, useEffect, useCallback } from "react";
+import CookieIconImg from "../../assets/images/Cookie/CookieIcon.svg";
+import AcceptIconImg from "../../assets/images/Cookie/AcceptIcon.svg";
+import RejectIconImg from "../../assets/images/Cookie/RejectIcon.svg";
 
 const setCookie = (name, value, days) => {
   let expires = "";
@@ -21,16 +24,8 @@ const getCookie = (name) => {
 
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const [gaLoaded, setGaLoaded] = useState(false);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  const [CookieIconImg, setCookieIconImg] = useState(null);
-  const [AcceptIconImg, setAcceptIconImg] = useState(null);
-  const [RejectIconImg, setRejectIconImg] = useState(null);
-
-  // Мемоизированная функция для загрузки GA
   const loadGoogleAnalytics = useCallback(() => {
-    if (gaLoaded) return;
     const script = document.createElement("script");
     script.src = "https://www.googletagmanager.com/gtag/js?id=G-1P81G0D66K";
     script.async = true;
@@ -41,60 +36,27 @@ const CookieConsent = () => {
       };
       window.gtag("js", new Date());
       window.gtag("config", "G-1P81G0D66K");
-      setGaLoaded(true);
     };
     document.head.appendChild(script);
-  }, [gaLoaded]);
+  }, []);
 
-  // Проверка куки при монтировании
   useEffect(() => {
     const consentCookie = getCookie("cookieConsent");
     if (consentCookie === "true") {
-      // Пользователь уже дал согласие — загружаем GA
       loadGoogleAnalytics();
-    } else if (consentCookie === "false") {
-      // Пользователь отказал — окно не показываем
-    } else {
-      // Куки нет — показываем окно
+    } else if (!consentCookie) {
       setIsVisible(true);
-      setImagesLoaded(true);
     }
-  }, [loadGoogleAnalytics]); // <-- добавлено тут
-
-  // Загрузка изображений
-  useEffect(() => {
-    if (imagesLoaded) {
-      import("../../assets/images/Cookie/CookieIcon.svg").then((module) =>
-        setCookieIconImg(module.default)
-      );
-      import("../../assets/images/Cookie/AcceptIcon.svg").then((module) =>
-        setAcceptIconImg(module.default)
-      );
-      import("../../assets/images/Cookie/RejectIcon.svg").then((module) =>
-        setRejectIconImg(module.default)
-      );
-    }
-  }, [imagesLoaded]);
-
-  // Предзагрузка CookieIcon
-  useEffect(() => {
-    if (imagesLoaded && CookieIconImg) {
-      const link = document.createElement("link");
-      link.rel = "preload";
-      link.href = CookieIconImg;
-      link.as = "image";
-      document.head.appendChild(link);
-    }
-  }, [imagesLoaded, CookieIconImg]);
+  }, [loadGoogleAnalytics]);
 
   const handleAccept = () => {
-    setCookie("cookieConsent", "true", 365); // сохраняем согласие на 1 год
+    setCookie("cookieConsent", "true", 365);
     setIsVisible(false);
     loadGoogleAnalytics();
   };
 
   const handleDecline = () => {
-    setCookie("cookieConsent", "false");
+    setCookie("cookieConsent", "false", 365);
     setIsVisible(false);
   };
 
@@ -103,20 +65,14 @@ const CookieConsent = () => {
   return (
     <div id="cookieConsent">
       <div className="cookie-title">
-        {imagesLoaded && CookieIconImg && (
-          <img src={CookieIconImg} alt="Мы используем cookie" />
-        )}
+        <img src={CookieIconImg} alt="Мы используем cookie" />
       </div>
       <div className="cookie-buttons">
         <button id="acceptBtn" onClick={handleAccept}>
-          {imagesLoaded && AcceptIconImg && (
-            <img src={AcceptIconImg} alt="Принять" />
-          )}
+          <img src={AcceptIconImg} alt="Принять" />
         </button>
         <button id="declineBtn" onClick={handleDecline}>
-          {imagesLoaded && RejectIconImg && (
-            <img src={RejectIconImg} alt="Отклонить" />
-          )}
+          <img src={RejectIconImg} alt="Отклонить" />
         </button>
       </div>
     </div>
