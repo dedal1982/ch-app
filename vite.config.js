@@ -3,25 +3,27 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { fileURLToPath } from "url";
 import { componentTagger } from "lovable-tagger";
+import viteCompression from "vite-plugin-compression";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(
-    Boolean
-  ),
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+    viteCompression(), // убедитесь, что импорт правильный
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
   build: {
-    minify: "esbuild", // Быстрее чем terser
+    minify: "esbuild",
     target: "esnext",
     manifest: "manifest.json",
     cssCodeSplit: false,
