@@ -13,12 +13,6 @@ const __dirname = path.dirname(__filename);
 
 app.use(express.json()); // для парсинга JSON тела запросов
 
-// Логирование каждого входящего запроса
-// app.use((req, res, next) => {
-//   logger.info(`${req.method} ${req.url}`);
-//   next();
-// });
-
 // API для логирования ошибок с клиента
 app.post("/api/log", (req, res) => {
   const { level, message } = req.body;
@@ -29,10 +23,6 @@ app.post("/api/log", (req, res) => {
 
   if (level === "error") {
     logger.error(message);
-    // } else if (level === "info") {
-    //   logger.info(message);
-    // } else {
-    //   logger.log(level, message);
   }
 
   res.status(204).send(); // No Content
