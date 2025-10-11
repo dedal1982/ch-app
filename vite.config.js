@@ -23,7 +23,8 @@ export default defineConfig(({ mode }) => ({
   build: {
     minify: "esbuild", // Быстрее чем terser
     target: "esnext",
-    cssCodeSplit: true,
+    manifest: "manifest.json",
+    cssCodeSplit: false,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -34,9 +35,9 @@ export default defineConfig(({ mode }) => ({
             "@radix-ui/react-toast",
           ],
         },
-        entryFileNames: "[name]-[hash].js",
-        chunkFileNames: "[name]-[hash].js",
-        assetFileNames: "[name]-[hash][extname]",
+        entryFileNames: "assets/js/[name].[hash].js",
+        chunkFileNames: "assets/js/[name].[hash].js",
+        assetFileNames: "assets/[ext]/[name].[hash][extname]",
       },
     },
     chunkSizeWarningLimit: 1000,
