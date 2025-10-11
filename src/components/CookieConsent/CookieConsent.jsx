@@ -65,7 +65,11 @@ const CookieConsent = () => {
   return (
     <div id="cookieConsent">
       <div className="cookie-title">
-        <img src={CookieIconImg} alt="Мы используем cookie" />
+        <img
+          src={CookieIconImg}
+          alt="Мы используем cookie"
+          fetchpriority="high"
+        />
       </div>
       <div className="cookie-buttons">
         <button id="acceptBtn" onClick={handleAccept}>
